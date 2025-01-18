@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\admin_controller;
+use App\Http\Controllers\admins_data_controller;
 use App\Http\Controllers\investors_controller;
 use App\Http\Controllers\founders_data_controller;
 use Illuminate\Support\Facades\Route;
@@ -30,13 +31,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('admin_dashboard',[admin_controller::class, 'admin']);
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 
-    Route::get('about',[admin_controller::class, 'about']);
-    Route::get('portfolio',[admin_controller::class, 'portfolio']);
-    Route::get('approach',[admin_controller::class, 'approach']);
-    Route::get('news',[admin_controller::class, 'news']);
-    Route::get('contact',[admin_controller::class, 'contact']);
+    // Route::get('admin_dashboard',[admin_controller::class, 'admin']);
+
+    // Route::get('about',[admin_controller::class, 'about']);
+    // Route::get('portfolio',[admin_controller::class, 'portfolio']);
+    // Route::get('approach',[admin_controller::class, 'approach']);
+    // Route::get('news',[admin_controller::class, 'news']);
+    // Route::get('contact',[admin_controller::class, 'contact']);
 
     Route::get('investors_dashboard', [investors_controller::class, 'investors']);
     Route::post('investors/insert', [investors_controller::class, 'insert_data']);
@@ -47,4 +50,13 @@ Route::middleware('auth')->group(function () {
 
 });
 
+// Route::middleware('auth')->group(function () {
+
+//     Route::get('dashboard', [admins_data_controller::class, 'index'])->name('dashboard');
+//     Route::get('dashboard/{id}/seeData', [admins_data_controller::class, 'view_all']);
+//     Route::get('dashboard/{id}/delete', [admins_data_controller::class, 'destroy']);
+//     Route::post('dashboard/insert', [admins_data_controller::class, 'insert']);
+// });
 require __DIR__.'/auth.php';
+
+require __DIR__.'/admin-auth.php';
