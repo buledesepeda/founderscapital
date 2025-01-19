@@ -19,6 +19,10 @@
         <style>
 
         body {
+            background-image: url('background/mudjapen.png'); 
+            background-size: cover; /* Adjusts the image to cover the entire div */ 
+        background-position: center; /* Centers the image within the div */ 
+        background-repeat: no-repeat; /* Prevents the image from repeating */ 
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -50,13 +54,14 @@
            
         }
     .account-container { 
-        width: 100%; height: 500px; 
-        /* background-color: grey; */
-        background-image: url('background/mudjapen.png'); 
+        width: 100%; height: 200px; 
+        /* background-image: url('background/mudjapen.png');  */
         background-size: cover; /* Adjusts the image to cover the entire div */ 
         background-position: center; /* Centers the image within the div */ 
-        background-repeat: no-repeat; /* Prevents the image from repeating */ }
-
+        background-repeat: no-repeat; /* Prevents the image from repeating */ 
+        /* border: 1px solid white; */
+    }
+        
             </style>
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
@@ -64,15 +69,18 @@
     
         <div class="container">
             <hr>
-        <i style="font-size: 2rem;">Welcome to Founders Capital Website</i>
+        <i style="font-size: 2rem;color:white;">Welcome to Founders Capital Website</i>
         <br><hr><br>
-        <label style="font-size:1.25rem">Login/Signup</label>
-        <div class="account-container">
+        <div class="reg-container"style="display:flex" >
+        <div class="title-reg-div">
+        <label style="font-size:1.25rem;color:white; float:left;">Login/Signup</label>
+        </div>
+        <div class="account-container" style="float:right;">
 
-                    <header class="grid items-center grid-cols-2 gap-2 py-10 lg:grid-cols-3">
+                    <header class="" >
                         
                         @if (Route::has('login'))
-                            <nav class="flex justify-end flex-1 -mx-3">
+                            <nav class="flex justify-end flex-3 -mx-3">
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"
@@ -83,6 +91,7 @@
                                     <a
                                         href="{{ route('login') }}"
                                         class="rounded-md px-3 py-10 text-white"
+                                        style="border: 1px solid white; display:block;padding:10px;"
                                     >
                                         Log in
                                     </a>
@@ -91,6 +100,7 @@
                                         <a
                                             href="{{ route('register') }}"
                                             class="rounded-md px-3 py-10 text-white"
+                                            style="border: 1px solid white; display:block;padding:10px;margin-left:5px;"
                                         >
                                             Register
                                         </a>
@@ -100,21 +110,22 @@
                         @endif
 
     </div>
+    </div>
     
     <br>
     <br>
     <hr>
 
-        <label  style="font-size:1.25rem">News & Insights</label>
+        <label  style="font-size:1.25rem;color:white;">News & Insights</label>
         <iframe src="https://www.example.com/news-insights"></iframe>
         
-        <label  style="font-size:1.25rem">Approach</label>
+        <label  style="font-size:1.25rem;color:white;">Approach</label>
         <iframe src="https://www.example.com/approach"></iframe>
         
-        <label  style="font-size:1.25rem">Portfolio</label>
+        <label  style="font-size:1.25rem;color:white;">Portfolio</label>
         <iframe src="https://www.example.com/portfolio"></iframe>
         
-        <label style="font-size:1.25rem">Contact Us</label>
+        <label style="font-size:1.25rem;color:white;">Contact Us</label>
         <iframe src="https://www.example.com/contact-us"></iframe>
         
         </div>

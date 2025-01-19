@@ -31,7 +31,7 @@
           <hr>
           
           <div class="ml-3 title" >
-            <img src="{{asset(''.$edit_data->profile_pic)}}" alt="" name="profile_pic">
+            <img src="{{url(''.$edit_data->profile_pic)}}" alt="" name="profile_pic">
           </div> 
           <hr>
           <div>
@@ -50,7 +50,7 @@
           <div class="mt-1 form-group w-60" style="border:1px solid #dfdede;border-radius:6px; border:none;display:flex">
                       <label for="" style="right:0;flex:start;padding:6px 12px;color:#5a5858">Risk Tolerance</label>
                         <select name="risk" style="flex:end;padding:6px;width:30%; border:1px solid #dfdede; border-top:0px;border-bottom:0px">
-                          <option value="" id=""readonly >{{$edit_data->risk}}</option>
+                          <option value="{{$edit_data->risk}}">{{$edit_data->risk}}</option>
                           <option value="Low" id="">Low</option>
                           <option value="Medium" id="">Medium</option>
                           <option value="High" id="">High</option>

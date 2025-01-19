@@ -18,12 +18,33 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <a href="{{url('about')}}" style="text-decoration: none;font-size:.9rem">About us</a>
+                    <x-nav-link href="{{url('investors_dashboard')}}" :active="request()->routeIs('investors_dashboard')">
+                        {{ __('Investors') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{url('about')}}">
+                        {{ __('About us') }}
+                    </x-nav-link>
+                    <x-nav-link  href="{{url('portfolio')}}">
+                        {{ __('Portfolio') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{url('approach')}}">
+                        {{ __('Approach') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{url('news')}}">
+                        {{ __('News & Insights') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{url('contact')}}">
+                        {{ __('Contact us') }}
+                    </x-nav-link>
+                    
+                    
+                    
+                    <!-- <a href="{{url('about')}}" style="text-decoration: none;font-size:.9rem">About us</a>
                     <a href="{{url('portfolio')}}" style="text-decoration: none;font-size:.9rem">Portfolio</a>
                     <a href="{{url('approach')}}" style="text-decoration: none;font-size:.9rem">Approach</a>
                     <a href="{{url('news')}}" style="text-decoration: none;font-size:.9rem">News & Insights</a>
                     <a href="{{url('contact')}}" style="text-decoration: none;font-size:.9rem">Contact us</a>
-                    <a href="{{url('investors_dashboard')}}" style="text-decoration: none;font-size:.9rem">Investor</a>
+                    <a href="{{url('investors_dashboard')}}" style="text-decoration: none;font-size:.9rem">Investor</a> -->
                 </div>
             </div>
 
@@ -79,6 +100,26 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{url('investors_dashboard')}}">
+                        {{ __('Investors') }}
+                    </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{url('about')}}">
+                        {{ __('About us') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link  href="{{url('portfolio')}}">
+                        {{ __('Portfolio') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link href="{{url('approach')}}">
+                        {{ __('Approach') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link href="{{url('news')}}">
+                        {{ __('News & Insights') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link href="{{url('contact')}}">
+                        {{ __('Contact us') }}
+                    </x-responsive-nav-link>
+                    
         </div>
 
         <!-- Responsive Settings Options -->

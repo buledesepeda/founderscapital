@@ -80,7 +80,7 @@ class investors_controller extends Controller
                     $file=$update_investors_image->file('profile_pic');
                     $extension=$file->getClientOriginalExtension();
                     $filename=time().'.'.$extension;
-
+ 
                     $path='investors/profile/';
                     $file->move($path,$filename);
             }

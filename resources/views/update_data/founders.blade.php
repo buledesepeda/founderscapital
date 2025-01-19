@@ -15,7 +15,14 @@
       @method('PUT')
   <div class="display-text-div" style="max-width:800px;margin:auto"> 
     <div class="div-nav">
-      <div class="form-group">
+      <hr>
+    <div class="title-investors-update">
+      <label style="float:left; font-size:1.3rem">{{$request->title}}</label>
+        <button type="submit" class="btn btn-primary" style="float: right;">Save changes</button>
+      </div>
+<br>      
+      <div class="form-group mt-4">
+        <hr>
           <input type="text" class="form-control" name="title" required 
           value="{{$request->title}}" placeholder="Title of the business . . ." >
       </div>
@@ -57,9 +64,7 @@
           <label for=""  style="display:flex; flex:start">Business model canvas </label>
           <img src="{{asset(''.$request->business_model)}}">
       </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
+
   </div>
     </div>
   <hr>

@@ -15,6 +15,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('index');
 
+Route::get('about',[admin_controller::class, 'about']);
+Route::get('portfolio',[admin_controller::class, 'portfolio']);
+Route::get('approach',[admin_controller::class, 'approach']);
+Route::get('news',[admin_controller::class, 'news']);
+Route::get('contact',[admin_controller::class, 'contact']);
+
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', [founders_data_controller::class, 'index'])->name('dashboard');
     Route::get('dashboard/{id}/seeData', [founders_data_controller::class, 'view_all']);
@@ -35,11 +41,7 @@ Route::middleware('auth')->group(function () {
 
     // Route::get('admin_dashboard',[admin_controller::class, 'admin']);
 
-    // Route::get('about',[admin_controller::class, 'about']);
-    // Route::get('portfolio',[admin_controller::class, 'portfolio']);
-    // Route::get('approach',[admin_controller::class, 'approach']);
-    // Route::get('news',[admin_controller::class, 'news']);
-    // Route::get('contact',[admin_controller::class, 'contact']);
+
 
     Route::get('investors_dashboard', [investors_controller::class, 'investors']);
     Route::post('investors/insert', [investors_controller::class, 'insert_data']);
