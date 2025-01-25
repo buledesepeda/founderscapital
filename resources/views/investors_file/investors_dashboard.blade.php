@@ -33,7 +33,7 @@
         <hr>
         
         <div class="ml-3 title">
-          <img src="{{$display_data->profile_pic}}" alt="">
+          <img src="{{url(''.$display_data->profile_pic)}}" style="max-width:500px">
         </div> 
         <div class="ml-3 title">
           <label for="">Years as an investor :  </label>
